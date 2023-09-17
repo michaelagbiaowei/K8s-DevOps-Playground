@@ -2,10 +2,10 @@
 provider "helm" {
     kubernetes {
     # Path to the Kubernetes configuration file
-    config_path = "~/.kube/config"
+    config_path = var.kube_config
 
     # Context name within the Kubernetes configuration file
-    config_context = "kind-my-cluster"
+    config_context = var.context
     }
 }
 
