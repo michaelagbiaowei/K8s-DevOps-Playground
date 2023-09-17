@@ -3,10 +3,10 @@ variable "kube_config" {
   default = "~/.kube/config"
 }
 
-variable "version" {
-    type = string
-    default = ">= 0.13"
-}
+# variable "terraform-version" {
+#     type = string
+#     default = ">= 0.13"
+# }
 
 variable "context" {
     type = string

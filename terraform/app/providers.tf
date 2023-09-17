@@ -1,7 +1,7 @@
 # Terraform configuration block
 terraform {
   # Specify the minimum required Terraform version
-  required_version = var.version
+  required_version = ">= 0.13"
 
   # Declare required providers and their versions
   required_providers {
