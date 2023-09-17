@@ -7,6 +7,8 @@ variable "namespace" {
   default = "monitoring"
 }
 variable "kube-version" {
+  type = string
+  default = "50.1.0"
 }
 
 variable "context" {

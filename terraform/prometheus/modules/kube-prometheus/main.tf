@@ -13,6 +13,6 @@ resource "kubernetes_namespace" "monitoring" {
 }
 
 module "kube" {
-  source = "modules/kube-prometheus"
-  kube-version = "36.2.0"
+  source = "./modules/kube-prometheus"
+  kube-version = var.kube-version
 }
