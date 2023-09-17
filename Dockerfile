@@ -1,6 +1,10 @@
 # Choose an authorized Node.js base image for your application as the build stage
 FROM node:20-alpine3.17 AS build
 
+LABEL Maintainer="Michael Agbiaowei"
+LABEL LinkedIn="https://www.linkedin.com/in/maiempire"
+LABEL Last_Edited="17/09/2023"
+
 # Set working directory for the build stage
 ENV APP_HOME /opt/app
 RUN mkdir ${APP_HOME}
