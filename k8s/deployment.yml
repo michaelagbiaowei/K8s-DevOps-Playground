@@ -4,24 +4,24 @@ apiVersion: apps/v1  # Specifies the API version for this Kubernetes resource.
 kind: Deployment  # Defines the type of resource, in this case, a Deployment.
 
 metadata:  # Metadata section for the Deployment resource.
-  name: app.deployment  # The name assigned to this Deployment resource.
+  name: app-deployment  # The name assigned to this Deployment resource.
 
 spec: # Specifies the desired state of the Deployment.
   replicas: 1 # Indicates that one replica Pod should be maintained.
   
   selector: # Defines how Pods are selected for this Deployment.
     matchLabels: # Labels to match Pods for this Deployment.
-      app: app.deployment  # Pods with the label "app: app.deployment" will be selected.
+      app: app-deployment  # Pods with the label "app: app-deployment" will be selected.
 
   template: # Describes the Pod template to be used for creating new Pods.
     metadata: # Metadata for the Pod template.
       labels: # Labels assigned to Pods created from this template.
-        app: app.deployment  # Pods created will have the label "app: app.deployment".
+        app: app-deployment  # Pods created will have the label "app: app-deployment".
 
     spec: # Defines the specification for the Pods to be created.
       containers: # List of containers in the Pod.
-        - name: app.deployment # Name of the container.
+        - name: app-deployment # Name of the container.
           image: maiempire/kind-app:latest # Docker image to use for this container.
           ports: # Specifies the ports that should be exposed within the Pod.
             - containerPort: 3000 # Port 3000 is exposed within the Pod.
-          name: app.deployment # Name of the container (can be different from the Pod name).
+          name: app-deployment # Name of the container (can be different from the Pod name).

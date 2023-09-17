@@ -4,16 +4,16 @@ apiVersion: v1 # Define the API version for this Kubernetes resource.
 kind: Service # Define the kind of Kubernetes resource, in this case, a Service.
 
 metadata: # Metadata section contains information about the Service.
-  name: app.service # Name of the Service, which will be used to identify it within the cluster.
+  name: app-service # Name of the Service, which will be used to identify it within the cluster.
 
 spec: # The spec section defines the desired state of the Service.
   type: ClusterIP # Specify the type of Service. In this case, it's a ClusteriP Service.
 
   selector: # Selector allows the Service to route traffic to Pods with specific labels.
-    app: app.deployment # This selector matches Pods with the label "app" set to "app.deployment."
+    app: app-deployment # This selector matches Pods with the label "app" set to "app-deployment."
 
   ports: # Ports section specifies the ports to expose on the Service.
-    - name: app.deployment # Name of the port. It's named "app.deployment" in this case.
+    - name: app-deployment # Name of the port. It's named "app-deployment" in this case.
       protocol: TCP # The protocol used for this port is TCP.
       port: 3000 # The port on which the Service should listen for incoming traffic.
       targetPort: 3000 # The targetPort is the port on the Pods that the Service should forward traffic to.
