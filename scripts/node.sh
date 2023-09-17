@@ -23,3 +23,11 @@ sudo apt update
 sudo apt install nodejs -y
 
 sudo apt install npm -y
+
+# Download the latest version of npm
+npm install -g npm
+
+# Step 5:
+# Check the installed version
+node -v
+npm -v
