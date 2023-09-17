@@ -128,3 +128,8 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+.terraform.lock.hcl
+terraform.tfstate
+.terraform
+get_helm.sh
