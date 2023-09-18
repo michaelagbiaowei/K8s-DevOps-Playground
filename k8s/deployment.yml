@@ -23,5 +23,3 @@ spec: # Specifies the desired state of the Deployment.
         - name: app-deployment # Name of the container.
           image: maiempire/kind-app:latest # Docker image to use for this container.
           ports: # Specifies the ports that should be exposed within the Pod.
-            - containerPort: 3000 # Port 3000 is exposed within the Pod.
-          name: app-deployment # Name of the container (can be different from the Pod name).
