@@ -99,7 +99,7 @@ Change the port property to your desired port in the `k8s/app/service.yml` file
       ports: 
         - name: app-deployment
         protocol: TCP
-        port: 5000
+        port: 5000 # Change to desired  port
 
 The port property specifies the port that the reverse proxy will listen on. In this case, the reverse proxy will listen on port 5000. When a user visits a website hosted by the reverse proxy, the reverse proxy will forward the request to the target server, which is listening on port 3000.
 

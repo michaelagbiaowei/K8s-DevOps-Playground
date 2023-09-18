@@ -1,6 +1,6 @@
-.PHONY: install_node install_docker install_kind install_terraform install_helm uplaod-docker
+.PHONY: install_node install_docker install_kind install_terraform install_helm docker_upload
 
-install_all: install_node install_docker install_kind install_terraform install_helm
+install_all: install_node install_docker install_kind install_helm install_terraform 
 
 install_node:
 	./scripts/node.sh
@@ -11,11 +11,11 @@ install_docker:
 install_kind:
 	./scripts/kind.sh
 
-install_terraform:
-	./scripts/terraform.sh
-
 install_helm:
 	./scripts/helm.sh
 
-uplaod_docker:
+install_terraform:
+	./scripts/terraform.sh
+
+docker_upload:
 	./scripts/uplaod-docker.sh

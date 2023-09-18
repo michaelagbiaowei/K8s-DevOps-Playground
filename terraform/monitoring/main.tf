@@ -1,10 +1,4 @@
+# This module block is defining a module named "kube" that will use the source code located in the "./modules/kube-prometheus" directory.
 module "kube" {
-  source = "./modules/kube-prometheus"
-  # kube-version = var.kube-version
+  source = "./modules/kube-prometheus"  # Specifies the source directory for the module.
 }
-
-# resource "kubernetes_namespace" "monitoring" {
-#   metadata {
-#     name = "monitoring"
-#   }
-# }
