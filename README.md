@@ -41,3 +41,11 @@
     |
     |----.dockerignore
     |----.gitignore
+    |----LICENSE
+    |----main.js
+    |----Makefile
+    |----package-lock.json
+    |----packag.json
+    |----README.md
+
+    
