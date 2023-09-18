@@ -1,5 +1,13 @@
 # K8s-DevOps-Playground
-This K8s-DevOps Playground project offers hands-on experience with building, deploying, and monitoring applications within Kubernetes clusters.
+
+**Prerequisites**
+- Linux server
+- go
+- Node
+- Docker
+- Kind
+- Helm
+- Terraform
 
 **File Structure**:
 
@@ -33,3 +41,15 @@ This K8s-DevOps Playground project offers hands-on experience with building, dep
     |
     |----.dockerignore
     |----.gitignore
+    |----Dockerfile
+    |----LICENSE
+    |----main.js
+    |----Makefile
+    |----package-lock.json
+    |----packag.json
+    |----README.md
+
+**Step 1**
+
+ **Setting up a Kubernetes Cluster with Kind**
+
