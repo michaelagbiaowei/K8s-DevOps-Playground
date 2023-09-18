@@ -3,7 +3,7 @@ FROM node:20-alpine3.17 AS build
 
 LABEL apptainer="Michael Agbiaowei"
 LABEL LinkedIn="https://www.linkedin.com/in/maiempire"
-LABEL Last_Edited="17/09/2023"
+LABEL Last_Edited="18/09/2023"
 
 # Set working directory for the build stage
 ENV APP_HOME /opt/app
