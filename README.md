@@ -63,12 +63,12 @@ Run `make install_all` form the root of the project to install the necessary dep
 
 ## **Running app.py**
 
-Standalone:
+**Standalone:**
 
     $ node install express
     $ node app.py
 
-Run in Docker:
+**Run in Docker:**
 
 Replce the placeholders with desired values
 
@@ -81,7 +81,7 @@ Browser: `localhost:[PORT]`
 
 Terminal: `curl localhost:[PORT]`
 
-Push to [docker hub](https://hub.docker.com/):
+**Push to [docker hub](https://hub.docker.com/):**
 
 Edit the dockerpath and user variables in the `scripts/docker-upload.sh` file
 
@@ -93,7 +93,7 @@ Edit the dockerpath and user variables in the `scripts/docker-upload.sh` file
 
 ## **Deploy manifest files to kubernetes kind cluster using [kubectl terraform provider](https://registry.terraform.io/providers/gavinbunney/kubectl/latest/docs)**
 
-Change the port property to your desired port in the `k8s/app/service.yml` file
+Change the port property to desired port in the `k8s/app/service.yml` file
 
       ports:
         - name: app-deployment
