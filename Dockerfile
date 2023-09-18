@@ -1,7 +1,7 @@
 # Choose an authorized Node.js base image for your application as the build stage
 FROM node:20-alpine3.17 AS build
 
-LABEL Maintainer="Michael Agbiaowei"
+LABEL apptainer="Michael Agbiaowei"
 LABEL LinkedIn="https://www.linkedin.com/in/maiempire"
 LABEL Last_Edited="17/09/2023"
 
@@ -34,6 +34,6 @@ WORKDIR ${APP_HOME}
 EXPOSE 3000
 
 # Define the command to run when the Docker container starts. 
-# In this case, it runs the node command with main.js as the argument. 
-# This means that when the Docker container starts, it will execute the main.js file using Node.js.
-CMD ["node", "main.js"]
+# In this case, it runs the node command with app.js as the argument. 
+# This means that when the Docker container starts, it will execute the app.js file using Node.js.
+CMD ["node", "app.js"]

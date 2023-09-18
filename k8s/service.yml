@@ -15,5 +15,5 @@ spec: # The spec section defines the desired state of the Service.
   ports: # Ports section specifies the ports to expose on the Service.
     - name: app-deployment # Name of the port. It's named "app-deployment" in this case.
       protocol: TCP # The protocol used for this port is TCP.
-      port: 3000 # The port on which the Service should listen for incoming traffic.
+      port: 5000 # The port on which the Service should listen for incoming traffic.
       targetPort: 3000 # The targetPort is the port on the Pods that the Service should forward traffic to.
