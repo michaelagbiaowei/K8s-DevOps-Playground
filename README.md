@@ -9,6 +9,7 @@
 This project involves setting up a Kubernetes cluster using Kind, a local deployment script, and deploying a Node.js app. It also includes creating a Docker image for a simple "Hello World" Express app, storing the kubeconfig securely, and writing [kubectl terraform provider](https://registry.terraform.io/providers/gavinbunney/kubectl/latest/docs) script to deploy the app to the Kind cluster. As a bonus, it sets up monitoring using the [kube-prometheus stack](https://github.com/prometheus-community/helm-charts/blob/main/charts/kube-prometheus-stack/README.md) stack with [terraform helm provider](https://registry.terraform.io/providers/hashicorp/helm/latest/docs).
 
 **Prerequisites**
+
 - Linux server (x86_64)
 - go (v1.16+)
 
@@ -18,8 +19,8 @@ This project involves setting up a Kubernetes cluster using Kind, a local deploy
     |----k8s
     |      |----deployment.yml
     |      |----service.yml
-    |     
-    |----scripts  
+    |
+    |----scripts
     |      |----docker-engin.sh
     |      |----docker-upload.sh
     |      |----helm.sh
@@ -65,15 +66,14 @@ Run `make install_all` form the root of the project to install the necessary dep
 Standalone:
 
     $ node install express
-    $ node app.py 
+    $ node app.py
 
 Run in Docker:
 
-Replce the placeholders with your desired values
+Replce the placeholders with desired values
 
     $ docker build -t [IMAGE_NAME] .
     $ docker run -p [PORT]:3000 [IMAGE_NAME]
-
 
 **Access Website**
 
@@ -81,8 +81,7 @@ Browser: `localhost:[PORT]`
 
 Terminal: `curl localhost:[PORT]`
 
-
-Push to [docker hub](https://hub.docker.com/): 
+Push to [docker hub](https://hub.docker.com/):
 
 Edit the dockerpath and user variables in the `scripts/docker-upload.sh` file
 
@@ -96,7 +95,7 @@ Edit the dockerpath and user variables in the `scripts/docker-upload.sh` file
 
 Change the port property to your desired port in the `k8s/app/service.yml` file
 
-      ports: 
+      ports:
         - name: app-deployment
         protocol: TCP
         port: 5000 # Change to desired  port
@@ -124,12 +123,11 @@ Here is an example of how a reverse proxy works:
                     |           |           |
                     +------------+----------+
 
-
 The reverse proxy listens on a single port (e.g., port 5000) and forwards requests to different target servers based on the rules that it is configured with. In this example, the reverse proxy might be configured to forward requests to different target servers based on the URL path.
 
 Reverse proxies are often used to improve the performance and scalability of websites and web applications. They can also be used to improve security by hiding the target servers from the internet.
 
-***Deploying with terraform***
+**_Deploying with terraform_**
 
 Run the following commands from both `terraform/app` and `terraform/monitoring` directories to deploy the Node.js and kube-prometheus stacks into the kubernetes kind cluster
 
@@ -163,30 +161,22 @@ Open a browser and go to: http://localhost:5000/ to see the Node.js UI.
 
 To access Prometheus:
 
-    $ kubectl port-forward svc/kube-prometheus-stack-prometheus 9090:9090 --namespace default
+    $ kubectl port-forward svc/kube-prometheus-stack-prometheus 5001:9090 --namespace default
 
-Open a browser and go to: http://localhost:9090/ to see the Prometheus UI.
-
-**Accessing Grafana**
-
-To access Grafana:
-
-    $ kubectl port-forward svc/kube-prometheus-stack-grafana 3000:80 --namespace default
-
-Open a browser and go to: http://localhost:3000/ to see the Grafana UI.
+Open a browser and go to: http://localhost:5001/ to see the Prometheus UI.
 
 **Accessing Alertmanager**
 
 Finally, to access Alertmanager, use this command:
 
-    $ kubectl port-forward svc/kube-prometheus-stack-alertmanager 9093:9093 --namespace default
-Open a browser and go to: http://localhost:9093/ to see the Alertmanager UI.
+    $ kubectl port-forward svc/kube-prometheus-stack-alertmanager 5002:9093 --namespace default
 
+Open a browser and go to: http://localhost:5002/ to see the Alertmanager UI.
 
+**Accessing Grafana**
 
+To access Grafana:
 
+    $ kubectl port-forward svc/kube-prometheus-stack-grafana 5003:80 --namespace default
 
- 
-
-
-    
+Open a browser and go to: http://localhost:5003/ to see the Grafana UI.
