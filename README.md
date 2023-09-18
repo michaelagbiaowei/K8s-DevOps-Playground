@@ -155,7 +155,7 @@ We can use port forwarding to reach our apps in the Kubernetes kind cluster. Thi
 
 To access Node.js UI:
 
-    kubectl port-forward svc/app-service 5000:3000 --namespace default
+    $ kubectl port-forward svc/app-service 5000:3000 --namespace default
 
 Open a browser and go to: http://localhost:5000/ to see the Node.js UI.
 
@@ -163,7 +163,7 @@ Open a browser and go to: http://localhost:5000/ to see the Node.js UI.
 
 To access Prometheus:
 
-    kubectl port-forward svc/kube-prometheus-stack-prometheus 9090:9090 --namespace default
+    $ kubectl port-forward svc/kube-prometheus-stack-prometheus 9090:9090 --namespace default
 
 Open a browser and go to: http://localhost:9090/ to see the Prometheus UI.
 
@@ -171,7 +171,7 @@ Open a browser and go to: http://localhost:9090/ to see the Prometheus UI.
 
 To access Grafana:
 
-    kubectl port-forward svc/kube-prometheus-stack-grafana 3000:80 --namespace default
+    $ kubectl port-forward svc/kube-prometheus-stack-grafana 3000:80 --namespace default
 
 Open a browser and go to: http://localhost:3000/ to see the Grafana UI.
 
@@ -179,7 +179,7 @@ Open a browser and go to: http://localhost:3000/ to see the Grafana UI.
 
 Finally, to access Alertmanager, use this command:
 
-    kubectl port-forward svc/kube-prometheus-stack-alertmanager 9093:9093 --namespace default
+    $ kubectl port-forward svc/kube-prometheus-stack-alertmanager 9093:9093 --namespace default
 Open a browser and go to: http://localhost:9093/ to see the Alertmanager UI.
 
 
