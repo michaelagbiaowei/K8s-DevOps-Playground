@@ -180,3 +180,15 @@ To access Grafana:
     $ kubectl port-forward svc/kube-prometheus-stack-grafana 5003:80 --namespace default
 
 Open a browser and go to: http://localhost:5003/ to see the Grafana UI.
+
+## 🔗 Contacts
+
+**MICHAEL AGBIAOWEI**
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/maiempire/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/2348168262740)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=Twitter&logoColor=white)](https://twitter.com/michaelagbiaow2)
+
+## Credits 
+
+**[ignite.dev](https://www.linkedin.com/company/ignitedev/)**
