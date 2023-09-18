@@ -41,15 +41,3 @@
     |
     |----.dockerignore
     |----.gitignore
-    |----Dockerfile
-    |----LICENSE
-    |----main.js
-    |----Makefile
-    |----package-lock.json
-    |----packag.json
-    |----README.md
-
-**Step 1**
-
- **Setting up a Kubernetes Cluster with Kind**
-
