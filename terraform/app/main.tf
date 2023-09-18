@@ -5,7 +5,7 @@
 resource "kubectl_manifest" "app-deployment" {
   # The "yaml_body" argument specifies the YAML content for the Kubernetes resource.
   # It reads the content from the deployment.yml file located in a specific path.
-  # The ${path.module} variable refers to the current module's directory, and ".." is used to navigate up one level.
+  # The ${path.module} variable refers to the current module's directory, and "../.." is used to navigate up two level.
   yaml_body = file("${path.module}/../../k8s/deployment.yml")
 }
 
@@ -13,6 +13,6 @@ resource "kubectl_manifest" "app-deployment" {
 resource "kubectl_manifest" "app-service" {
   # The "yaml_body" argument specifies the YAML content for the Kubernetes resource.
   # It reads the content from the service.yml file located in a specific path.
-  # The ${path.module} variable refers to the current module's directory, and ".." is used to navigate up one level.
+  # The ${path.module} variable refers to the current module's directory, and "../.." is used to navigate up two level.
   yaml_body = file("${path.module}/../../k8s/service.yml")
 }
